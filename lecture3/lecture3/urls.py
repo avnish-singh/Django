@@ -22,4 +22,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('hello/', include('hello.urls')), # include() function allows us to include other URLconf modules. Here we are including hello/urls.py
     path('newyear/', include('newyear.urls')), # include() function allows us to include other URLconf modules. Here we are including newyear/urls.py
+    path('tasks/', include('tasks.urls')), # include() function allows us to include other URLconf modules. Here we are including newyear/urls.py
 ]

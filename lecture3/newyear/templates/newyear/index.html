@@ -1,0 +1,18 @@
+{% load static %} 
+<!-- This is a Django template tag that loads static files. It allows us to use the static tag to reference static files in our templates. In this case, we can use it to link to our styles.css file in the static/newyear directory. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Is it New Year's?</title>
+    <link rel="stylesheet" href="{% static 'newyear/styles.css' %}">
+  </head>
+<body>
+      {% if newyear %}
+        <h1> YES </h1>
+      {% else %}
+        <h1> NO </h1>
+      {% endif %} <!-- This is a Django template tag. It checks if the variable "newyear" is True. If it is, it displays "YES". Otherwise, it displays "NO". The value of "newyear" is passed from the view in views.py. -->
+</body>
+</html>
